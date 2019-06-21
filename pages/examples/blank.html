@@ -16,6 +16,39 @@
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style>
+  @media only screen and (max-width: 425px) {
+    .row{
+      font-size: 15px;
+    }
+    td .row{
+      width: 100px;
+    }
+    .content{
+      margin: 0 10px!important;
+      padding: 0!important;
+    }
+  }
+  tr th{
+    padding-top: 5px!important;
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+    padding-bottom: 5px!important;
+    width: 25px;
+  }
+  tr td{
+    padding-top: 5px!important;
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+    padding-bottom: 5px!important;
+  }
+  .card-body.p-0 .table tbody>tr>td:first-of-type, .card-body.p-0 .table tbody>tr>th:first-of-type, .card-body.p-0 .table thead>tr>td:first-of-type, .card-body.p-0 .table thead>tr>th:first-of-type, .pl-4, .px-4 {
+    padding-left: 4px!important;
+  }
+  .card-body.p-0 .table tbody>tr>td:last-of-type, .card-body.p-0 .table tbody>tr>th:last-of-type, .card-body.p-0 .table thead>tr>td:last-of-type, .card-body.p-0 .table thead>tr>th:last-of-type, .pr-4, .px-4 {
+    padding-right: 4px!important;
+  }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -74,86 +107,80 @@
     </div>
     <!-- Main content -->
     <section class="content mx-3">
-
+        <button type="button" class="btn btn-primary"><i class="fas fa-clipboard-check"></i></button>
       <!-- Default box -->
       <div class="row">
         <div class="col-12">
           <div class="card">
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
-              <table class="table table-hover">
+              <table class="table table-hover table-striped">
                 <thead>
                     <tr>
-                      <th scope="col">No.</th>
+                      <th scope="col" class="text-center">No.</th>
                       <th scope="col">Nama</th>
-                      <th scope="col">Masuk
-                          <input type="checkbox" value="1" name="fooby[1][]" id="masukSemua" />
+                      <th scope="col" class="text-center">
+                        Masuk
                       </th>
-                      <th scope="col">Sakit
-                          <input type="checkbox" value="1" name="fooby[1][]" id="sakitSemua" />
+                      <th scope="col" class="text-center">
+                        Sakit
                       </th>
-                      <th scope="col">Izin
-                          <input type="checkbox" value="1" name="fooby[1][]" id="izinSemua" />
+                      <th scope="col" class="text-center">
+                        Izin
                       </th>
-                      <th scope="col">Alpha
-                          <input type="checkbox" value="1" name="fooby[1][]" id="alphaSemua" />
+                      <th scope="col" class="text-center">
+                        Alpha
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <form action="">
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[2][]" class="masuk" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[2][]" class="sakit" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[2][]" class="izin" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[2][]" class="alpha" id="exampleCheck1">
-                          </td>
-                      </form>
+                      <th scope="row" class="text-center">1</th>
+                      <td >Rizal Ali Ridho</td>
+                      <td class="text-center">
+                        <input type="radio" value="1" name="mark" class="masuk" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="2" name="mark" class="sakit" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="3" name="mark" class="izin" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="4" name="mark" class="alpha" id="exampleCheck1">
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
+                      <th scope="row" class="text-center">2</th>
                       <td>Jacob</td>
-                      <form action="">
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[3][]" class="masuk" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[3][]" class="sakit" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[3][]" class="izin" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[3][]" class="alpha" id="exampleCheck1">
-                          </td>
-                      </form>
+                      <td class="text-center">
+                        <input type="radio" value="1" name="jacob" class="masuk" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="2" name="jacob" class="sakit" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="3" name="jacob" class="izin" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="4" name="jacob" class="alpha" id="exampleCheck1">
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
+                      <th scope="row" class="text-center">3</th>
                       <td>Larry</td>
-                      <form action="">
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[4][]" class="masuk" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[4][]" class="sakit" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[4][]" class="izin" id="exampleCheck1">
-                          </td>
-                          <td>
-                              <input type="checkbox" value="1" name="fooby[4][]" class="alpha" id="exampleCheck1">
-                          </td>
-                      </form>
+                      <td class="text-center">
+                        <input type="radio" value="1" name="larry" class="masuk" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="2" name="larry" class="sakit" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="3" name="larry" class="izin" id="exampleCheck1">
+                      </td>
+                      <td class="text-center">
+                        <input type="radio" value="4" name="larry" class="alpha" id="exampleCheck1">
+                      </td>
                     </tr>
                   </tbody>
               </table>
@@ -168,15 +195,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.0-alpha
-    </div>
-    <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -184,7 +202,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-<script src="absensi.js"></script>
+<!-- <script src="absensi.js"></script> -->
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
